@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+
+    div(class="container-fluid")
+
+    if (err)
+        div
+            h2(style = "color: red;")= err
+    p Created by Keith Moore
+    h1(class="header")
+      | FreeCodeCamp API Basejump: URL Shortener Microservice
+    blockquote
+      p User stories:
+      ul
+        li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</ul>
+        li When I visit that shortened URL, it will redirect me to my original link.
+    </ul>
+    h3 Example creation usage:
+    code.
+    code https://mysterious-savannah-41175.herokuapp.com/new/https://www.google.com
+  br
+  code https://mysterious-savannah-41175.herokuapp.com/new/http://foo.com:80
+    h3 Example creation output:
+    code
+      | {
+      | &quot;original_url&quot;:&quot;http://foo.com:80&quot;,
+      | &quot;short_url&quot;:&quot;https://mysterious-savannah-41175.herokuapp.com/SJzqX8Vr&quot;
+      | }
+    h3 Usage:
+    code
+    code     mysterious-savannah-41175.herokuapp.com/SkCoMI4H
+    h3 Will redirect to:
+    code https://www.google.com/
